@@ -50,7 +50,8 @@ header{
 
 #cards{
     display: flex;
-    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
     gap: 32px;
 }
 
@@ -60,21 +61,28 @@ header{
     background: var(--card-bg-color);
     border-bottom: 2px solid var(--card-color-primary);
     border-radius: 6px;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 52px;
 
 }
 
 .card h2{
     display: flex;
-    gap:16px;
+    gap: 16px;
     justify-content: center;
     align-items: center;
+
     padding: 8px 16px;
     border: 1px solid var(--card-title-border-color);
     border-radius: 6px;
+
     width: fit-content;
-    margin-inline: auto;
-    margin-bottom: 53px;
+    margin: 0px auto 20px auto;
+
     color: #F7DD43;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .card h2 span{
@@ -88,7 +96,7 @@ header{
     display: flex;
     flex-direction: column;
     gap:24px;
-    width: 270px;
+    width: 250px;
     
 }
 
@@ -138,10 +146,9 @@ header{
     }
 }
 
-@media (min-width: 700px){
+@media (min-width: 1300px){
     #cards{
-        max-width: 670px;
+        max-width: 970px;
         flex-direction: row;
-        flex-wrap: wrap;
     }
 }
